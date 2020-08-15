@@ -32,10 +32,10 @@ module.exports = {
           case 502:
             msg = 'Você já atingiu o limite de submissões.';
             break;
-          case 504:
+          case 503:
             msg = `O usuário com e-mail ${process.env.USER_EMAIL} não foi encontrado. Para trocar o e-mail, apague a sua aplicação pela lista de recursos da IBM Cloud e realize o deploy novamente.`;
             break;
-          case 503:
+          case 504:
             msg =
               'As credenciais do modelo estão incorretas. Troque-as clicando no botão de configuração no canto superior direito.';
             break;
