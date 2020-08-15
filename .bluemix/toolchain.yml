@@ -22,7 +22,7 @@ toolchain:
       $ref: '#/messages/toolchain.getting_started'
 services:
   repo:
-    service_id: github_public
+    service_id: githubpublic
     parameters:
       repo_url: https://github.com/maratonadev-br/desafio-1-2020
       type: link
