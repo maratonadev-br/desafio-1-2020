@@ -150,7 +150,7 @@ Veja o vídeo abaixo de como treinar o seu modelo de Visual Recognition, usando 
 
 Para submeter sua solução é necessário subir a aplicação de submissão na IBM Cloud, você deve **clicar no botão abaixo**, que irá ativar a ferramenta de _Continuous Delivery_ da IBM Cloud (também conhecida como _Delivery Pipeline_). A ferramenta irá pedir suas credenciais, seu e-mail, e uma senha, que você deve escolher para utilizar futuramente.
 
-> Atenção: o nome da ferramenta não pode ter espaços nem caracteres especiais, somente letras e hífen (-).
+> Atenção: o nome da ferramenta não pode ter espaços nem caracteres especiais, somente letras, números e hífen (-).
 
 <div align="center">
 <p><b>🚨 CLIQUE PARA SUBIR A APLICAÇÃO NA IBM CLOUD 🚨</b></p>
