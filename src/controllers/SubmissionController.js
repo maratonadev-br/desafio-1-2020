@@ -33,11 +33,17 @@ module.exports = {
             msg = 'Você já atingiu o limite de submissões.';
             break;
           case 503:
-            msg = `O usuário com e-mail ${process.env.USER_EMAIL} não foi encontrado. Para trocar o e-mail, apague a sua aplicação pela lista de recursos da IBM Cloud e realize o deploy novamente.`;
-            break;
-          case 504:
             msg =
               'As credenciais do modelo estão incorretas. Troque-as clicando no botão de configuração no canto superior direito.';
+            break;
+          case 504:
+            msg = `O usuário com e-mail ${process.env.USER_EMAIL} não foi encontrado. Para trocar o e-mail, apague a sua aplicação pela lista de recursos da IBM Cloud e realize o deploy novamente.`;
+            break;
+          case 505:
+            msg = `O seu e-mail (${process.env.USER_EMAIL}) não está confirmado. Confirme o e-mail para poder submeter o desafio.`;
+            break;
+          case 506:
+            msg = 'As submissões para esse desafio já estão encerradas.';
             break;
           case 500:
           case 501:
