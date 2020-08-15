@@ -1,0 +1,17 @@
+{
+  "name": "server-template",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js"
+  },
+  "dependencies": {
+    "axios": "^0.19.2",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "ibm-watson": "^5.6.1",
+    "multer": "^1.4.2"
+  }
+}

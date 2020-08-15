@@ -1,0 +1,90 @@
+---
+stages:
+- name: Build
+  inputs:
+  - type: git
+    branch: master
+    service: ${REPO}
+  jobs:
+  - name: Build
+    type: builder
+    script: |
+      #!/bin/bash
+      export PATH=/opt/IBM/node-v6.7.0/bin:$PATH
+      npm install
+- name: Deploy
+  inputs:
+  - type: job
+    stage: Build
+    job: Build
+  triggers:
+  - type: stage
+  properties:
+  - name: CF_APP_NAME
+    value: undefined
+    type: text
+  - name: APP_URL
+    value: undefined
+    type: text
+  - name: VR_APIKEY
+    value: ${VR_APIKEY}
+    type: text
+  - name: VR_COLLECTION_ID
+    value: ${VR_COLLECTION_ID}
+    type: text
+  - name: VR_URL
+    value: ${VR_URL}
+    type: text
+  - name: USER_EMAIL
+    value: ${USER_EMAIL}
+    type: text
+  - name: DEPLOYMENT_PASSWORD
+    value: ${DEPLOYMENT_PASSWORD}
+    type: text
+  jobs:
+  - name: Deploy
+    type: deployer
+    target:
+      region_id: ${CF_REGION_ID}
+      organization: ${CF_ORGANIZATION}
+      space: ${CF_SPACE}
+      application: ${CF_APP}
+      api_key: ${API_KEY}
+    script: |
+      #!/bin/bash
+      # Push app
+      if ! cf app $CF_APP; then  
+        cf push $CF_APP --no-start --random-route -m 128M
+        cf set-env $CF_APP VR_APIKEY ${VR_APIKEY}
+        cf set-env $CF_APP VR_COLLECTION_ID ${VR_COLLECTION_ID}
+        cf set-env $CF_APP VR_URL ${VR_URL}
+        cf set-env $CF_APP USER_EMAIL ${USER_EMAIL}
+        cf set-env $CF_APP DEPLOYMENT_PASSWORD ${DEPLOYMENT_PASSWORD}
+        cf start $CF_APP
+      else
+        OLD_CF_APP=${CF_APP}-OLD-$(date +"%s")
+        rollback() {
+          set +e  
+          if cf app $OLD_CF_APP; then
+            cf logs $CF_APP --recent
+            cf delete $CF_APP -f
+            cf rename $OLD_CF_APP $CF_APP
+          fi
+          exit 1
+        }
+        set -e
+        trap rollback ERR
+        cf rename $CF_APP $OLD_CF_APP
+        cf push $CF_APP --no-start -m 128M
+        cf set-env $CF_APP VR_APIKEY ${VR_APIKEY}
+        cf set-env $CF_APP VR_COLLECTION_ID ${VR_COLLECTION_ID}
+        cf set-env $CF_APP VR_URL ${VR_URL}
+        cf set-env $CF_APP USER_EMAIL ${USER_EMAIL}
+        cf set-env $CF_APP DEPLOYMENT_PASSWORD ${DEPLOYMENT_PASSWORD}
+        cf start $CF_APP
+        cf delete $OLD_CF_APP -f
+      fi
+      #Print the dev test variabel
+      # Export app name and URL for use in later Pipeline jobs
+      export CF_APP_NAME="$CF_APP"
+      export APP_URL=http://$(cf app $CF_APP_NAME | grep -e urls: -e routes: | awk '{print $2}')

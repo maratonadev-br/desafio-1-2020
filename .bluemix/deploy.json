@@ -1,0 +1,173 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "messages": {
+    "$i18n": "locales.yml"
+  },
+  "title": {
+    "$ref": "#/messages/deploy.title"
+  },
+  "longDescription": {
+    "$ref": "#/messages/deploy.longDescription"
+  },
+  "type": "object",
+  "properties": {
+    "pipeline_name": {
+      "type": "string"
+    },
+    "dev-region": {
+      "description": {
+        "$ref": "#/messages/deploy.region"
+      },
+      "type": "string",
+      "validator": {
+        "v-type": "cf-region",
+        "params": ["api-key"]
+      }
+    },
+    "dev-organization": {
+      "description": {
+        "$ref": "#/messages/deploy.org"
+      },
+      "type": "string",
+      "validator": {
+        "v-type": "cf-org",
+        "params": ["dev-region"]
+      }
+    },
+    "dev-space": {
+      "description": {
+        "$ref": "#/messages/deploy.space"
+      },
+      "type": "string",
+      "validator": {
+        "v-type": "cf-space",
+        "params": ["dev-organization"]
+      }
+    },
+    "api-key": {
+      "description": {
+        "$ref": "#/messages/deploy.apiKeyDescription"
+      },
+      "type": "string",
+      "validator": {
+        "v-type": "api-key"
+      }
+    },
+    "email": {
+      "description": {
+        "$ref": "#/messages/deploy.emailDescription"
+      },
+      "type": "string"
+    },
+    "pw": {
+      "description": {
+        "$ref": "#/messages/deploy.pwDescription"
+      },
+      "type": "string"
+    },
+    "vr-api-key": {
+      "description": {
+        "$ref": "#/messages/deploy.vrApiKeyDescription"
+      },
+      "type": "string"
+    },
+    "vr-url": {
+      "description": {
+        "$ref": "#/messages/deploy.urlDescription"
+      },
+      "type": "string"
+    },
+    "collection-id": {
+      "description": {
+        "$ref": "#/messages/deploy.collectionIdDescription"
+      },
+      "type": "string"
+    }
+  },
+  "required": [
+    "dev-region",
+    "dev-organization",
+    "dev-space",
+    "api-key",
+    "email",
+    "vr-api-key",
+    "collection-id",
+    "pw",
+    "vr-url"
+  ],
+  "form": [
+    {
+      "type": "email",
+      "readonly": false,
+      "title": {
+        "$ref": "#/messages/deploy.form.email"
+      },
+      "key": "email"
+    },
+    {
+      "type": "validator",
+      "url": "/devops/validator/validator-v1.html"
+    },
+    {
+      "type": "password",
+      "readonly": false,
+      "title": {
+        "$ref": "#/messages/deploy.apiKeyTitle"
+      },
+      "key": "api-key"
+    },
+    {
+      "type": "select",
+      "key": "dev-region"
+    },
+    {
+      "type": "select",
+      "key": "dev-organization"
+    },
+    {
+      "type": "select",
+      "key": "dev-space",
+      "readonly": false
+    },
+    {
+      "type": "text",
+      "readonly": true,
+      "title": {
+        "$ref": "#/messages/deploy.form.description"
+      },
+      "key": "pipeline_name"
+    },
+    {
+      "type": "text",
+      "readonly": false,
+      "title": {
+        "$ref": "#/messages/deploy.form.apikey"
+      },
+      "key": "vr-api-key"
+    },
+    {
+      "type": "text",
+      "readonly": false,
+      "title": {
+        "$ref": "#/messages/deploy.form.url"
+      },
+      "key": "vr-url"
+    },
+    {
+      "type": "text",
+      "readonly": false,
+      "title": {
+        "$ref": "#/messages/deploy.form.collection_id"
+      },
+      "key": "collection-id"
+    },
+    {
+      "type": "password",
+      "readonly": false,
+      "title": {
+        "$ref": "#/messages/deploy.form.pw"
+      },
+      "key": "pw"
+    }
+  ]
+}

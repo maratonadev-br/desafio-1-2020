@@ -1,0 +1,65 @@
+version: '2'
+messages:
+  $i18n: locales.yml
+template:
+  name:
+    $ref: '#/messages/template.name'
+  description:
+    $ref: '#/messages/template.description'
+  icon: icon.svg
+  required:
+    - build
+    - repo
+  info:
+    git url: >-
+      [https://github.com/open-toolchain/default-toolchain](https://github.com/open-toolchain/default-toolchain)
+    git branch: >-
+      [master](https://github.com/open-toolchain/default-toolchain/tree/master)
+toolchain:
+  name: '{{form.pipeline.parameters.app-name}}'
+  template:
+    getting_started:
+      $ref: '#/messages/toolchain.getting_started'
+services:
+  repo:
+    service_id: github_public
+    parameters:
+      repo_url: https://github.com/maratonadev-br/desafio-1-2020
+      type: link
+      has_issues: false
+      enable_traceability: false
+  build:
+    service_id: pipeline
+    parameters:
+      services:
+        - repo
+      name: '{{toolchain.name}}'
+      ui-pipeline: true
+      configuration:
+        content:
+          $text: pipeline.yml
+        env:
+          REPO: repo
+          BRANCH: '{{branch}}'
+          CF_APP: '{{toolchain.name}}'
+          CF_SPACE: '{{form.pipeline.parameters.dev-space}}'
+          CF_ORGANIZATION: '{{form.pipeline.parameters.dev-organization}}'
+          CF_REGION_ID: '{{form.pipeline.parameters.dev-region}}'
+          API_KEY: '{{form.pipeline.parameters.api-key}}'
+          VR_URL: '{{form.pipeline.parameters.vr-url}}'
+          VR_APIKEY: '{{form.pipeline.parameters.vr-api-key}}'
+          VR_COLLECTION_ID: '{{form.pipeline.parameters.collection-id}}'
+          USER_EMAIL: '{{form.pipeline.parameters.email}}'
+          DEPLOYMENT_PASSWORD: '{{form.pipeline.parameters.pw}}'
+        execute: true
+  webide:
+    service_id: orion
+form:
+  pipeline:
+    parameters:
+      dev-region: ''
+      dev-organization: ''
+      dev-space: ''
+      app-name: '{{services.repo.parameters.repo_name}}'
+    schema:
+      $ref: deploy.json
