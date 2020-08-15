@@ -51,7 +51,7 @@ Vamos focar somente nas quatro principais pragas que atigem a lavoura de soja, s
 3. Percevejo pequeno
 4. Percevejo verde
 
-*Obs: Os nomes das classes esperadas são apresetados mais abaixo. Não utilize os nomes acima como nome das classes.*
+*Obs: Os nomes das classes esperadas são apresentados mais abaixo. Não utilize os nomes acima como nome das classes.*
 
 Sua tarefa é buscar imagens dessas pragas e criar um modelo de reconhecimento visual capaz de identificar corretamente cada uma delas, de modo que o agrônomo consiga dar o tratamento adequado.
 
