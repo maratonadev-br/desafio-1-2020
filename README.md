@@ -82,7 +82,7 @@ Nesse repositório, no diretório [dataset](./doc/source/dataset) existem quatro
 A figura 1 mostra um exemplo de _Lagarta de soja_.
 
 <div align="center">
-    <img width="750" src="doc/source/dataset/lagarta/lagarta.jpeg" />
+    <img width="750" src="./doc/source/dataset/lagarta/lagarta.jpeg" />
     <p>Figura 1: Exemplo de lagarta de soja.</p>
 </div>
 <br>
@@ -166,11 +166,11 @@ Para pegar o `IAM_APIKEY` (ou, em alguns casos, `API Key` apenas) e a `URL` do V
 <div align="center">
     <h2><b>Visual Recognition</b></h2>
     <h3><b>IAM_APIKEY do Visual Recognition na IBM Cloud</b></h3>
-    <img width="750" src="doc/source/images/VRAPIKEY.png">
+    <img width="750" src="./doc/source/images/VRAPIKEY.png">
     <h3><b>URL do Visual Recognition na IBM Cloud</b></h3>
-    <img width="750" src="doc/source/images/VRURL.png">
+    <img width="750" src="./doc/source/images/VRURL.png">
     <h3><b>CLASSIFIER_ID no Watson Studio</b></h3>
-    <img width="750" src="doc/source/images/VRMODEL.png">
+    <img width="750" src="./doc/source/images/VRMODEL.png">
 </div>
 
 Ao final do processo você terá uma aplicação para testar seu modelo de reconhecimento visual e a submissão do seu desafio será feita através dela. São permitidas apenas três submissões. Veja o vídeo acima para saber onde pegar a url da aplicação.
