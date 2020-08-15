@@ -169,7 +169,7 @@ Para pegar o `IAM_APIKEY` (ou, em alguns casos, `API Key` apenas) e a `URL` do V
     <img width="750" src="./doc/source/images/VRAPIKEY.png">
     <h3><b>URL do Visual Recognition na IBM Cloud</b></h3>
     <img width="750" src="./doc/source/images/VRURL.png">
-    <h3><b>CLASSIFIER_ID no Watson Studio</b></h3>
+    <h3><b>MODEL_ID no Watson Studio</b></h3>
     <img width="750" src="./doc/source/images/VRMODEL.png">
 </div>
 
