@@ -190,9 +190,9 @@ O sistema testará o reconhecimento das quatro classes citadas acima, ou seja, s
 
 ## 7. Especificações técnicas
 
-Para a resolução do desafio, você irá utilizar o serviço de [Visual Recognition](https://cloud.ibm.com/catalog/services/visual-recognition) no plano Lite. Nesse plano, existe um limite de 1000 eventos por mês, em que cada evento corresponde, por exemplo, a uma imagem durante o treinamento, ou à classificação de uma imagem. Portanto, tome cuidado ao usar muitas imagens e treinar muitas vezes para não estrapolar o limite do plano, o que invalidaria seu modelo para submissão. Deixe uma margem de pelo menos 100 eventos para que seu modelo possa ser avaliado com sucesso.
+Para a resolução do desafio, você irá utilizar o serviço de [Visual Recognition](https://cloud.ibm.com/catalog/services/visual-recognition) no plano Lite. Nesse plano, existe um limite de 1000 eventos por mês, em que cada evento corresponde, por exemplo, a uma imagem durante o treinamento, ou à classificação de uma imagem. Portanto, tome cuidado ao usar muitas imagens e treinar muitas vezes para não extrapolar o limite do plano, o que invalidaria seu modelo para submissão. Deixe uma margem de pelo menos 100 eventos para que seu modelo possa ser avaliado com sucesso.
 
-_Exemplo: Um usuário estrapola o limite do plano Lite criando 4 classes com 250 imagens cada e treinando o modelo, pois 4 \* 250 = 1000._
+_Exemplo: Um usuário extrapola o limite do plano Lite criando 4 classes com 250 imagens cada e treinando o modelo, pois 4 \* 250 = 1000._
 
 ## Material de apoio
 
