@@ -135,8 +135,8 @@ Cada participante deve considerar quatro classes em seu modelo, sendo elas:
 
 - `lagarta` -> representando a lagarta de soja
 - `percevejo_marrom` -> representando o pervejo marrom
-- `percevejo_pequeno` -> repressantando o percevejo pequeno
-- `percevejo_verde` -> representnado o percevejo verde
+- `percevejo_pequeno` -> representando o percevejo pequeno
+- `percevejo_verde` -> representando o percevejo verde
 
 Veja o vídeo abaixo de como treinar o seu modelo de Visual Recognition, usando Watson Studio.
 
