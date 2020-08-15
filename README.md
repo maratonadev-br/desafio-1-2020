@@ -26,11 +26,11 @@
 
 A Cocamar Cooperativa Agroindustrial foi fundada em 27 de março de 1963, em Maringá (PR). Reuniu, inicialmente, um grupo de 46 fundadores, todos produtores de café. O objetivo era organizar a produção regional, receber e beneficiar o produto. Com o tempo, a cooperativa diversificou os negócios e cresceu. Hoje, a Cocamar está presente em vários municípios por meio de mais de 80 unidades operacionais espalhadas pelo norte e noroeste do Paraná, oeste paulista e sudoeste do Mato Grosso do Sul. Conta com 15 mil associados que atuam com a produção de soja, milho, trigo, café e laranja.
 
-<!--<div align="center">
-    <a href="">
+<div align="center">
+    <a href="https://youtu.be/Ur9ktogEkgo">
        <img width="50%" src="./doc/source/images/yt1-pt.png" alt='video'>
     </a>
-</div>-->
+</div>
 
 ## 2. Desafio de Negócio
 
