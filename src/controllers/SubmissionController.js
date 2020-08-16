@@ -17,7 +17,7 @@ module.exports = {
         response = credentialsResponse;
       } else {
         const submissionResponse = await axios.post(
-          'https://submission.maratona.dev/api/v1/desafios/dvr',
+          'https://submission.maratona.dev/api/v1/desafios/dcocamar',
           {
             ...credentialsResponse.credentials,
             email: process.env.USER_EMAIL
