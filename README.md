@@ -204,7 +204,7 @@ _Exemplo: Um usuário extrapola o limite do plano Lite criando 4 classes com 250
 
 Caso o vídeo publicado acima não seja suficiente, você pode analisar a documentação oficial do serviço envolvido no desafio:
 
-- [IBM Watson Visual Recognition]()
+- [IBM Watson Visual Recognition](https://cloud.ibm.com/docs/visual-recognition)
 
 Você também pode acessar o discord oficial da Maratona 2020 para realizar perguntas e/ou interagir com outros participantes: [Discord](https://discord.gg/2NRPpcU).
 
