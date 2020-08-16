@@ -1,5 +1,5 @@
 ---
-template.name: 'Cadeia de ferramentas do Continuous Delivery - Não coloque espaços em brancos no nome da sua cadeia de ferramentas!'
+template.name: 'Cadeia de ferramentas do Continuous Delivery'
 template.description: "Esta cadeia de ferramentas inclui ferramentas para desenvolver e implementar seu app. Dependendo do seu app, ao criar a cadeia de ferramentas, o repositório Git estará vazio ou conterá o código-fonte do seu app.\n\nEsta cadeia de ferramentas usa ferramentas que são parte do serviço Entrega contínua. Se uma instância desse serviço ainda não estiver na organização selecionada, ela será adicionada automaticamente com o plano [Lite](/catalog/services/continuous-delivery/) grátis selecionado ao clicar em **Criar**.\n\nPara iniciar, clique em **Criar**."
 toolchain.getting_started: '**Seu app está sendo criado! Iniciação rápida:** para ver o pipeline implementar seu app, clique em **Delivery Pipeline**. Após o app ser implementado, será possível vê-lo em execução clicando em **Visualizar app**.'
 deploy.title: 'Maratona Behind the Code 2020 - Desafio 1 - Deploy'
