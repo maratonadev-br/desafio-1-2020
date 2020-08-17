@@ -42,7 +42,7 @@ A ideia do desafio é auxiliar o dia a dia do produtor, fornecendo para ele uma 
 
 ## 3. Objetivo
 
-O objetivo deste desafio é criar um sistema automático de identificação das pragas que atigem a lavoura de soja citadas acima. Para esse desafio aconselhamos que o participante utilize o _IBM Watson Visual Recognition_ e monte o seu classificador através dele. Antes o participante terá que separar manualmente as imagens da base nas classes citadas anteriormente. Caso considere pertinente, cada participante pode manipular as imagens da base previamente afim de melhorar a acurácia de classificação do modelo do Watson Visual Recognition.
+O objetivo deste desafio é criar um sistema automático de identificação das pragas que atingem a lavoura de soja citadas acima. Para esse desafio aconselhamos que o participante utilize o _IBM Watson Visual Recognition_ e monte o seu classificador através dele. Antes o participante terá que separar manualmente as imagens da base nas classes citadas anteriormente. Caso considere pertinente, cada participante pode manipular as imagens da base previamente afim de melhorar a acurácia de classificação do modelo do Watson Visual Recognition.
 
 Vamos focar somente nas quatro principais pragas que atigem a lavoura de soja, são elas:
 
@@ -150,7 +150,7 @@ Veja o vídeo abaixo de como treinar o seu modelo de Visual Recognition, usando 
 
 Para submeter sua solução é necessário subir a aplicação de submissão na IBM Cloud, você deve **clicar no botão abaixo**, que irá ativar a ferramenta de _Continuous Delivery_ da IBM Cloud (também conhecida como _Delivery Pipeline_). A ferramenta irá pedir suas credenciais, seu e-mail, e uma senha, que você deve escolher para utilizar futuramente.
 
-> Atenção: o nome da ferramenta não pode ter espaços nem caracteres especiais, somente letras, números e hífen (-).
+> Atenção: o nome da ferramenta não pode ter espaços nem caracteres especiais, somente letras, números e hifens (-).
 
 <div align="center">
 <p><b>🚨 CLIQUE PARA SUBIR A APLICAÇÃO NA IBM CLOUD 🚨</b></p>
