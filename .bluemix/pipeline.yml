@@ -53,14 +53,15 @@ stages:
     script: |
       #!/bin/bash
       # Push app
-      if ! cf app $CF_APP; then  
-        cf push $CF_APP --no-start --random-route -m 128M
-        cf set-env $CF_APP VR_APIKEY ${VR_APIKEY}
-        cf set-env $CF_APP VR_COLLECTION_ID ${VR_COLLECTION_ID}
-        cf set-env $CF_APP VR_URL ${VR_URL}
-        cf set-env $CF_APP USER_EMAIL ${USER_EMAIL}
-        cf set-env $CF_APP DEPLOYMENT_PASSWORD ${DEPLOYMENT_PASSWORD}
-        cf start $CF_APP
+      if ! cf app "$CF_APP"; then  
+        cf push "$CF_APP" --no-start --random-route -m 128M
+        cf set-env "$CF_APP" VR_APIKEY ${VR_APIKEY}
+        cf set-env "$CF_APP" VR_COLLECTION_ID ${VR_COLLECTION_ID}
+        cf set-env "$CF_APP" VR_URL ${VR_URL}
+        cf set-env "$CF_APP" USER_EMAIL ${USER_EMAIL}
+        cf set-env "$CF_APP" DEPLOYMENT_PASSWORD "${DEPLOYMENT_PASSWORD}"
+        cf start "$CF_APP"
+        echo "Deploy realizado. A sua senha do para submissão é: ${DEPLOYMENT_PASSWORD}"
       else
         OLD_CF_APP=${CF_APP}-OLD-$(date +"%s")
         rollback() {
