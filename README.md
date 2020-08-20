@@ -150,6 +150,8 @@ Veja o vídeo abaixo de como treinar o seu modelo de Visual Recognition, usando 
 
 Para submeter sua solução é necessário subir a aplicação de submissão na IBM Cloud, você deve **clicar no botão abaixo**, que irá ativar a ferramenta de _Continuous Delivery_ da IBM Cloud (também conhecida como _Delivery Pipeline_). A ferramenta irá pedir suas credenciais, seu e-mail, e uma senha, que você deve escolher para utilizar futuramente.
 
+Antes de iniciar o processo de deploy, você pode assistir ao vídeo a seguir para esclarecer qualquer tipo de dúvida acerca desta etapa: https://youtu.be/hBvnC83ZKM4
+
 <div align="center">
 <p><b>🚨 CLIQUE PARA SUBIR A APLICAÇÃO NA IBM CLOUD 🚨</b></p>
 <a href="https://cloud.ibm.com/devops/setup/deploy?repository=https://github.com/maratonadev-br/desafio-1-2020" target="_blank" rel="noopener noreferrer">
@@ -162,8 +164,6 @@ Para submeter sua solução é necessário subir a aplicação de submissão na 
 🚨 **SALVE AS CREDENCIAIS. VOCÊ IRÁ PRECISAR PARA SUBIR A APLICAÇÃO** 🚨
 
 Para pegar o `IAM_APIKEY` (ou, em alguns casos, `API Key` apenas) e a `URL` do Visual Recognition, acesse o https://cloud.ibm.com/resources e veja na lista de `Service`, você encontrará todos os serviços provisionados na sua conta.
-
-Antes de iniciar o processo de deploy, você pode assistir ao vídeo a seguir para esclarecer qualquer tipo de dúvida acerca desta etapa: https://youtu.be/hBvnC83ZKM4
 
 <div align="center">
     <h2><b>Visual Recognition</b></h2>
