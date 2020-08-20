@@ -163,6 +163,8 @@ Para submeter sua solução é necessário subir a aplicação de submissão na 
 
 Para pegar o `IAM_APIKEY` (ou, em alguns casos, `API Key` apenas) e a `URL` do Visual Recognition, acesse o https://cloud.ibm.com/resources e veja na lista de `Service`, você encontrará todos os serviços provisionados na sua conta.
 
+Antes de iniciar o processo de deploy, você pode assistir ao vídeo a seguir para esclarecer qualquer tipo de dúvida acerca desta etapa: https://youtu.be/hBvnC83ZKM4
+
 <div align="center">
     <h2><b>Visual Recognition</b></h2>
     <h3><b>IAM_APIKEY do Visual Recognition na IBM Cloud</b></h3>
