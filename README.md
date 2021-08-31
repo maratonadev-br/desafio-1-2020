@@ -2,6 +2,8 @@
 [![Platform](https://img.shields.io/badge/platform-nodejs-lightgrey.svg?style=flat)](https://developer.ibm.com/node/)
 [![](https://img.shields.io/discord/734849242153222221?logo=discord)](https://discord.gg/2NRPpcU)
 
+**Atenção: O serviço Watson Visual Recognition usado neste desafio não está mais disponível no catálogo da IBM Cloud. Para trabalhar com classificação de imagens, recomendamos o [IBM Maximo](https://www.ibm.com/products/maximo/remote-monitoring)**
+
 # Desafio 01 | Cocamar
 
 - [1. Sobre a Cocamar](#1-sobre-a-cocamar)
